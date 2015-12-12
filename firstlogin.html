@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/style_firstlogin.css"> 
+    <script type="text/javascript" src="scripts/validateForm.js"></script>
+  </head>
+
+<body>
+ 
+  <div class='container'>
+    
+    <div class='row' id='firstrow'></div>
+
+    <div class='row' id='secondrow'>    
+      <h1 id='welcome'>Welcome, <span id='highlight'>Philosopher King.</span></h1>
+
+      <div class="form-style">
+        <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbyNQZQ0JXoK6zLzKSsRJ0sEsTPpN_h3DwIUxV6YX-J793PLTNQ/exec">
+          <input type="email" name="email" placeholder="Email address" />
+          <button type="email">Go</button>
+        </form>
+      </div>
+
+      <div style="display:none; padding-bottom: 8px;" id="thankyou_message">
+        <h3>Great, let's <a href="newtab.html">get wiser</a>.</h3>
+      </div>
+    </div>
+
+    <div class='row' id='thirdrow'>
+      <img src="images/small_face.png" alt="Marcus Aurelius face" id='marcus'>
+    </div>
+
+    <script type="text/javascript" src="scripts/jQuery.js"></script>
+    <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+      
+  </div>
+
+</body>
+
+</html>

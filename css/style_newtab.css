@@ -1,0 +1,131 @@
+/* Background image */
+body {
+  font-family: Cochin;
+  background: url('../images/background_newtab.png') no-repeat left top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+/* Sizing the page */
+#main {
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-flex-flow: row;
+         flex-flow: row;
+ }
+
+/* Main section */
+#main > article {
+ 	font-size: 42px;
+	font-style: bold;
+  -webkit-flex: 3 1 45%; /* Percentage is horizontal space */
+         flex: 3 1 45%; /* Percentage is horizontal space */
+  -webkit-order: 2;
+         order: 2;
+ }
+
+/* Left buffer section */
+#main > nav {
+	margin: 4px;
+  padding: 5px;
+ 	-webkit-flex: 1 6 15%; /* Percentage is horizontal space */
+         flex: 1 6 15%; /* Percentage is horizontal space */
+ 	-webkit-order: 1;
+         order: 1;
+
+ }
+
+/* Right buffer section */
+#main > aside {
+  margin: 4px;
+  padding: 5px;
+  -webkit-flex: 1 6 40%; /* Percentage is horizontal space */
+         flex: 1 6 40%; /* Percentage is horizontal space */
+  -webkit-order: 3;
+         order: 3;
+ }
+
+
+#quote{
+	line-height: 1.2;
+  padding: 30px;
+  color: #A9A9A9;
+  border-left: 10px solid rgba(0, 0, 255, 0.07);
+  border-bottom: 10px solid rgba(0, 0, 255, 0.07);
+  text-align: center;
+}
+
+.watermark{
+  text-align: center;
+  border-right: 0px solid rgba(0, 0, 255, 0.07);  
+}
+
+#tealMark { 
+  background-color: rgba(237, 255, 255, 0.5);
+  color: rgba(0, 0, 255, 0.15);
+}
+
+
+#siteContain{
+  padding-top: 50px;
+  padding-right: 30px;
+  font-size: 2.8vh;
+  font-style: bold;
+  color: #d9d9d9;
+}
+
+
+#iconContain {
+  padding-right: 30px;
+  padding-top: 35px;
+  font-size: 12px;
+}
+
+.icons {
+	opacity: 0.1;
+	height: 3vh;
+	width: auto;
+}
+
+#sloganContain {
+	padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  line-height: 1.8;
+  font-style: normal;	
+  color: #d9d9d9;
+}
+
+
+header, footer {
+ display: block;
+ margin: 4px;
+ padding: 5px;
+ min-height: 60px;
+ }
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+
+ #main, #page {
+  -webkit-flex-flow: column;
+          flex-direction: column;
+ }
+
+ #main > article, #main > nav, #main > aside {
+  /* Return them to document order */
+  -webkit-order: 0;
+          order: 0;
+ }
+
+ #main > nav, #main > aside, header, footer {
+  min-height: 50px;
+  max-height: 50px;
+ }
+}
+
+#thankyou_message {
+  text-align: middle;
+  background-color: red;
+}
